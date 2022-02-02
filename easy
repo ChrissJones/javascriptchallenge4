@@ -1,0 +1,101 @@
+//Easy//
+
+/* EASY: Write a function that takes in an array of numbers and outputs the average of all the numbers. 
+
+Example 1:
+
+Input: [1 , 4 , 7]  Output: 4
+
+Input: [10, 5]  Output: 7.5
+
+Input: [1.5, 3, 2.5, 1]  Output: 2 */
+
+const average = arr => arr.reduce((a,b) => a + b, 0) / arr.length;
+
+console.log (average([3, 5, 6, 9, 1, 4]));
+
+//Medium//
+
+/*MEDIUM: Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand. (i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]).
+
+You are given a target value to search. If found in the array return its index, otherwise return -1.
+
+You may assume no duplicate exists in the array.
+
+Hint:  Use a function. Use the built in method .indexOf( ) and/or  for loops. Review your lesson on Arrays to aid in working through this problem. 
+
+Example 1:
+
+Input: nums = [4,5,6,7,0,1,2], target = 0
+
+Output: 4
+
+Example 2:
+
+Input: nums = [4,5,6,7,0,1,2], target = 3
+
+Output: -1. */
+
+
+nums = [4,5,6,7,0,1,2]
+function containsNum (num){
+    return nums.indexOf(num)
+}
+console.log(containsNum(7))
+console.log(containsNum(9))
+
+// Hard //
+
+/* HARD: Create two buttons, one that when clicked turns the background of the body red. The other, when clicked, turns the body's background color white. Each of the background colors should be defined as class styles and when the buttons are pushed the body's classList is updated to include the correct class for the background. 
+
+Create a single function that takes an input className and updates the body's classList to ONLY include that className
+
+*Note: Check Canvas for the starter code needed for this exercise. The starter code will be located in a folder named hard_js. */
+
+/*Script on HTML */
+
+ document.getElementById("redbtn").onclick = function(){
+	document.classList("bg-red").style.backgroundColor ='red';
+}
+ function ChangeColor2() {
+   document.getElementById('whitebtn').style.background-color;
+}
+document.getElementById("whitebtn").onclick = function(){
+ 	document.classList("bg-white").style.backgroundColor ='white';
+}
+
+ var button = document.querySelector("button");
+
+button.getElementsByClassName("click", function() {
+     const backColor = document.body.style.backgroundColor;
+
+     if (backColor === 'red') {
+         document.body.style.backgroundColor = "white";
+     }
+     else {
+         document.body.style.backgroundColor = "red";
+     }
+});
+var button = document.querySelector("button");
+
+button.addEventListener("click", function() {
+     const curColour = document.body.style.backgroundColor;
+
+     document.body.style.backgroundColor = curColour === 'red' ? 'white' : 'red';
+});
+
+const redButton = document.querySelectorAll('[data-red]')
+const whiteButton = document.querySelectorAll('[data-white]')
+
+redButton.forEach(button => {
+     button.addEventListener('click', () => {
+      
+     })
+   })
+  
+   whiteButton.forEach(button => {
+     button.addEventListener('click', () => {
+      
+     })
+   })
+
